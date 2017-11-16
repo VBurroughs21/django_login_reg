@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>L/R | Success</title>
+  </head>
+  <body>
+    <h3>Success! Welcome {{request.session.first_name}}</h3>
+    {% if messages %}
+      {% for message in messages %}
+        <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+      {% endfor %}
+    {% endif %}
+
+    <a href="/">Go back</a>
+  </body>
+</html>
